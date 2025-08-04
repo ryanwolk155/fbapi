@@ -94,6 +94,7 @@
 
     .custom-btn {
       color: white;
+      background-color: #25D366;
       border: none;
       padding: 15px 30px;
       border-radius: 5px;
@@ -110,20 +111,8 @@
       user-select: none;
     }
 
-    .whatsapp-btn {
-      background-color: #25D366;
-    }
-
-    .whatsapp-btn:hover {
+    .custom-btn:hover {
       background-color: #1ebe5b;
-    }
-
-    .telegram-btn {
-      background-color: #0088cc;
-    }
-
-    .telegram-btn:hover {
-      background-color: #007ab8;
     }
 
     .custom-btn i {
@@ -141,11 +130,8 @@
       <strong>Online agora</strong>
     </div>
 
-    <button id="purchaseBtn" class="custom-btn whatsapp-btn">
-      <i class="fab fa-whatsapp"></i> Comprar WhatsApp
-    </button>
-    <button id="telegramBtn" class="custom-btn telegram-btn">
-      <i class="fab fa-telegram-plane"></i> Comprar no Telegram
+    <button id="previewBtn" class="custom-btn">
+      <i class="fas fa-eye"></i> Ver Prévias
     </button>
   </div>
 
@@ -171,14 +157,9 @@
         return utmString ? `${baseURL}?${utmString}` : baseURL;
       }
 
-      document.getElementById('purchaseBtn').addEventListener('click', function () {
+      document.getElementById('previewBtn').addEventListener('click', function () {
         fbq('track', 'Lead');
-        const finalURL = buildURL("https://mais.red/run/20996");
-        window.location.href = finalURL;
-      });
-
-      document.getElementById('telegramBtn').addEventListener('click', function () {
-        const finalURL = buildURL("https://t.me/botdamelissa_bot");
+        const finalURL = buildURL("https://testesa-three.vercel.app/");
         window.location.href = finalURL;
       });
     });
