@@ -1,4 +1,4 @@
-nt<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -52,9 +52,10 @@ nt<!DOCTYPE html>
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
       height: 100vh;
       width: 100%;
+      text-align: center;
     }
 
     .online-status {
@@ -71,7 +72,6 @@ nt<!DOCTYPE html>
       border-radius: 30px;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
       animation: pop 0.6s ease-in-out;
-      margin-bottom: 10px;
     }
 
     .pulse {
@@ -118,6 +118,17 @@ nt<!DOCTYPE html>
     .custom-btn i {
       font-size: 20px;
     }
+
+    .gift-text {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      animation: pop 0.6s ease-in-out;
+    }
   </style>
 </head>
 <body>
@@ -130,8 +141,10 @@ nt<!DOCTYPE html>
       <strong>Online agora</strong>
     </div>
 
+    <div class="gift-text">Presentinho grátis aqui amor</div>
+
     <button id="previewBtn" class="custom-btn">
-      <i class="fas fa-eye"></i> Presentinho grátis
+      <i class="fas fa-gift"></i> Presentinho grátis
     </button>
   </div>
 
