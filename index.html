@@ -138,12 +138,12 @@
     const btnWhatsapp = document.getElementById('btnWhatsapp');
     const btnTelegram = document.getElementById('btnTelegram');
 
-    // Checar se já passou 48h desde o último clique
+    // Checar se já passou 4 dias desde o último clique
     const lastClickTime = localStorage.getItem('whatsappClickTime');
     const now = Date.now();
-    const fortyEightHours = 48 * 60 * 60 * 1000;
+    const fourDays = 4 * 24 * 60 * 60 * 1000; // 4 dias em ms
 
-    if (lastClickTime && (now - lastClickTime) < fortyEightHours) {
+    if (lastClickTime && (now - lastClickTime) < fourDays) {
       disableWhatsappButton();
     }
 
